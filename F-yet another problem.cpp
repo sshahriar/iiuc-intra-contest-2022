@@ -35,7 +35,7 @@ int get_res() {
     return  0 ; 
 }
 void  solve() {      
-    int x,y,z ,  ans = 0 , mx = 0 , mn=inf  ;         
+    int x,y,z ,  ans = 0 , mx = 0 , mn=1e9  ;         
     int q ;
 
     cin >> n  ;
@@ -70,4 +70,3 @@ signed main() {
 
 // g++ -DLocal -std=c++11 f.cpp -o f.exe
 // ./f.exe  
-
