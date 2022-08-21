@@ -1,23 +1,17 @@
 #include <bits/stdc++.h> 
 using namespace std; 
-
 typedef long long ll  ;
 
 #define  int ll 
-const int inf  =    1e9  ;   //0xc0  ;//0x3f ;   
 const int maxn   = (int)3e5 + 123 ;
- 
-int n , m , k , flag =   0  ;  
+
+int n , m , k, l, r ;
 int a[maxn ]  , b[30]; 
-int l, r ;
-
-
 bool checkbit(int x ,int id ) {
     return   (bool)(x&(1<< id))  ;
 } 
 int get_res() {
     int cnt = 0; 
-
     // get m maximum elements in array b 
     for(int i= l ; i<=r ;i++ ) b[cnt++  ]  =  a[ i ]  ;
     sort(b, b+cnt ) ;
@@ -33,13 +27,12 @@ int get_res() {
                 v.push_back(b[j]) ;        
             }
         } 
-
         if(tot % k  == 0  ) {
             return 1 ;
         }
     }   
-    return  0 ; 
 
+    return  0 ; 
 }
 void  solve() {      
     int x,y,z ,  ans = 0 , mx = 0 , mn=inf  ;         
@@ -48,14 +41,12 @@ void  solve() {
     cin >> n  ;
     for( int i=0; i<n ;i++  ) cin >> a[i  ] ;
     
-
     cin >> q  ; 
     while(q-- ) {
         cin >> l >> r >> m >> k ; 
         l--, r--  ; 
         if( get_res() )  cout <<  "YES" << endl ;
         else cout << "NO"  << endl ;
-
     }
 }                  
 signed main() {      
@@ -66,8 +57,6 @@ signed main() {
     cin.tie(0);  
     cout << fixed << setprecision( 12  ) ; 
     int t = 1 , cs = 0  ; 
-  
-     
     // cin >> t  ;   
     while(t--)   {         
         // cout <<  "Case #"  <<  ++cs<< ": " ;
@@ -82,9 +71,3 @@ signed main() {
 // g++ -DLocal -std=c++11 f.cpp -o f.exe
 // ./f.exe  
 
- 
-
-
-
-
- 
